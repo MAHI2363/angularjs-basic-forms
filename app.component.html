@@ -6,7 +6,9 @@
         <label for="usernameinput">Username</label>
         <input 
             type="text" 
+            name-trail-directive
             ng-model="$ctrl.username"
+            name-custom-check=""
             minlength="3"
             required
             name="usernameinput">
@@ -15,6 +17,9 @@
         </p>
         <p ng-show="myform.usernameinput.$error.minlength">
                 This requires minimum 3 characters
+        </p>
+        <p ng-show="myform.usernameinput.$error.nameCustomCheck">
+           Can't start with letter 'a'
         </p>
     </div>
     <div class="formgroup">
